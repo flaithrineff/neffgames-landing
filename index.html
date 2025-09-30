@@ -26,62 +26,51 @@
 <body>
   <div class="logo">
     <!-- Inline SVG Logo -->
-    <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-      <!-- Background -->
-      <rect width="400" height="200" fill="none"/>
-      
-      <!-- Gradient definitions -->
-      <defs>
-        <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#ff1744;stop-opacity:1" />
-          <stop offset="50%" style="stop-color:#d50000;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#ff5252;stop-opacity:1" />
-        </linearGradient>
-        
-        <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#ff1744;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#ff5252;stop-opacity:1" />
-        </linearGradient>
-        
-        <filter id="glow">
-          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-          <feMerge>
-            <feMergeNode in="coloredBlur"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
-      </defs>
-      
-      <!-- Stylized "N" game controller icon -->
-      <g transform="translate(80, 60)">
-        <!-- Controller body -->
-        <path d="M 0,30 Q 0,0 30,0 L 50,0 Q 80,0 80,30 L 80,50 Q 80,70 60,70 L 20,70 Q 0,70 0,50 Z" 
-              fill="none" 
-              stroke="url(#neonGrad)" 
-              stroke-width="4"
-              filter="url(#glow)"/>
-        
-        <!-- D-pad (left side) forming "N" shape -->
-        <line x1="15" y1="25" x2="15" y2="45" stroke="url(#neonGrad)" stroke-width="3" stroke-linecap="round"/>
-        <line x1="15" y1="25" x2="25" y2="45" stroke="url(#neonGrad)" stroke-width="3" stroke-linecap="round"/>
-        <line x1="25" y1="25" x2="25" y2="45" stroke="url(#neonGrad)" stroke-width="3" stroke-linecap="round"/>
-        
-        <!-- Buttons (right side) -->
-        <circle cx="55" cy="30" r="5" fill="url(#neonGrad)" opacity="0.8"/>
-        <circle cx="65" cy="35" r="5" fill="url(#neonGrad)" opacity="0.6"/>
-        <circle cx="55" cy="40" r="5" fill="url(#neonGrad)" opacity="0.8"/>
-      </g>
-      
-      <!-- Text -->
-      <text x="170" y="95" font-family="Arial, sans-serif" font-size="48" font-weight="200" fill="url(#textGrad)" filter="url(#glow)">
-        NEFF
-      </text>
-      <text x="170" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="200" fill="#ff1744" letter-spacing="4">
-        GAMES
-      </text>
-      
-      <!-- Accent line -->
-      <line x1="170" y1="128" x2="320" y2="128" stroke="url(#neonGrad)" stroke-width="2" opacity="0.6"/>
+   <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e4d5c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d2e3a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Large Capital N -->
+  <g transform="translate(80, 40)">
+    <!-- Left vertical bar of N -->
+    <rect x="0" y="0" width="35" height="180" fill="#ff1744"/>
+    
+    <!-- Diagonal bar of N -->
+    <polygon points="0,0 35,0 110,180 75,180" fill="#ff1744"/>
+    
+    <!-- Right vertical bar of N -->
+    <rect x="75" y="0" width="35" height="180" fill="#ff1744"/>
+    
+    <!-- "GAMES" text vertically on left bar -->
+    <text x="17" y="40" 
+          font-family="Arial, sans-serif" 
+          font-size="35" 
+          font-weight="bold" 
+          fill="url(#blueGrad)"
+          text-anchor="middle"
+          letter-spacing="8">
+      <tspan x="29" dy="10">G</tspan>
+      <tspan x="29" dy="29">a</tspan>
+      <tspan x="29" dy="29">m</tspan>
+      <tspan x="29" dy="29">e</tspan>
+      <tspan x="22" dy="29">s</tspan>
+    </text>
+    
+    <!-- "eff" text at the base, aligned with bottom -->
+    <text x="110" y="175" 
+          font-family="Arial, sans-serif" 
+          font-size="48" 
+          font-weight="normal" 
+          fill="#ff1744">
+      eff
+    </text>
+  </g>
+</svg>
     </svg>
   </div>
 </body>
